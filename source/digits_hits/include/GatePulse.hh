@@ -60,6 +60,9 @@ class GatePulse
       inline void  SetRunID(G4int j)                  	      { m_runID = j; }
       inline G4int GetRunID()  const                       	      { return m_runID; }
 
+      inline void  SetTrackID(G4int j)          { m_trackID = j; }
+      inline G4int GetTrackID() const                { return m_trackID; }
+
       inline void  SetEventID(G4int j)                	      { m_eventID = j; }
       inline G4int GetEventID() const                      	      { return m_eventID; }
 
@@ -141,6 +144,7 @@ private:
   //! \name pulse data
   //@{
   G4int m_runID;      	      	  //!< runID
+  G4int m_trackID;
   G4int m_eventID;            	  //!< eventID
   G4int m_sourceID;           	  //!< source progressive number
   G4ThreeVector m_sourcePosition; //!< position of the source (NOT the positron) that generated the hit

@@ -247,6 +247,8 @@ ELSE()
   SET(ITKMHD_LIBS MetaIO itkzlib)
 ENDIF()
 
+
+
 #=========================================================
 # Add the executable, and link it to the Geant4/ROOT/CLHEP/ITK libraries
 IF(GATE_USE_GPU AND CUDA_FOUND)
@@ -260,6 +262,9 @@ TARGET_LINK_LIBRARIES(Gate ${Geant4_LIBRARIES} ${ROOT_LIBRARIES} ${CLHEP_LIBRARI
 
 #=========================================================
 INSTALL(TARGETS Gate DESTINATION bin)
+
+find_package(GSL REQUIRED)    # See below (2)
+target_link_libraries(Gate GSL::gsl GSL::gslcblas)
 
 #=========================================================
 option(GATE_DOWNLOAD_BENCHMARKS_DATA "Download the missing binary data to run gate benchmarks" OFF)

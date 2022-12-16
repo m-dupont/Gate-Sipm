@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<surfaces>
+	<surface model="DAVIS" name="Rough_LUT" type="dielectric_LUTDAVIS" finish="Rough_LUT"></surface>
+	<surface model="DAVIS" name="RoughTeflon_LUT" type="dielectric_LUTDAVIS" finish="RoughTeflon_LUT"></surface>
+	<surface model="DAVIS" name="RoughESR_LUT" type="dielectric_LUTDAVIS" finish="RoughESR_LUT"></surface>
+	<surface model="DAVIS" name="RoughESRGrease_LUT" type="dielectric_LUTDAVIS" finish="RoughESRGrease_LUT"></surface>
+	<surface model="DAVIS" name="Polished_LUT" type="dielectric_LUTDAVIS" finish="Polished_LUT"></surface>
+	<surface model="DAVIS" name="PolishedTeflon_LUT" type="dielectric_LUTDAVIS" finish="PolishedTeflon_LUT"></surface>
+	<surface model="DAVIS" name="PolishedESR_LUT" type="dielectric_LUTDAVIS" finish="PolishedESR_LUT"></surface>
+	<surface model="DAVIS" name="PolishedESRGrease_LUT" type="dielectric_LUTDAVIS" finish="PolishedESRGrease_LUT"></surface>
+	<surface model="DAVIS" name="Detector_LUT" type="dielectric_LUTDAVIS" finish="Detector_LUT">
+		<propertiestable>
+			<propertyvector name="EFFICIENCY" energyunit="eV">
+				<ve energy="1.84" value="1.0"></ve>
+				<ve energy="4.08" value="1.0"></ve>
+			</propertyvector>
+		</propertiestable>
+	</surface>
+	<surface model="DAVIS" name="Detector_LUT_hamamatsu" type="dielectric_LUTDAVIS" finish="Detector_LUT">
+		<propertiestable>
+			<propertyvector name="EFFICIENCY" energyunit="eV">
+				<ve energy="3.85914154653" value="0.0254237288136"></ve>
+				<ve energy="3.77987804878" value="0.0656779661017"></ve>
+				<ve energy="3.68526282854" value="0.122881355932"></ve>
+				<ve energy="3.57779465371" value="0.176906779661"></ve>
+				<ve energy="3.50956495828" value="0.224576271186"></ve>
+				<ve energy="3.30474186308" value="0.278601694915"></ve>
+				<ve energy="3.19016793066" value="0.333686440678"></ve>
+				<ve energy="2.98330800405" value="0.372881355932"></ve>
+				<ve energy="2.81234479465" value="0.396186440678"></ve>
+				<ve energy="2.6792766151" value="0.400423728814"></ve>
+				<ve energy="2.5582319722" value="0.39406779661"></ve>
+				<ve energy="2.32401341752" value="0.353813559322"></ve>
+				<ve energy="2.23239196361" value="0.317796610169"></ve>
+				<ve energy="2.10473552538" value="0.271186440678"></ve>
+				<ve energy="1.99628813559" value="0.235169491525"></ve>
+				<ve energy="1.87429980904" value="0.185381355932"></ve>
+				<ve energy="1.77916918429" value="0.156779661017"></ve>
+				<ve energy="1.67017867272" value="0.118644067797"></ve>
+				<ve energy="1.56707025013" value="0.0879237288136"></ve>
+				<ve energy="1.49392440386" value="0.0646186440678"></ve>
+				<ve energy="1.37916861827" value="0.0370762711864"></ve>
+			</propertyvector>
+		</propertiestable>
+	</surface>
+	<surface name="polished_teflon" type="dielectric_dielectric" sigmaalpha="0.1" finish="groundbackpainted">
+		<propertiestable>
+			<propertyvector name="SPECULARLOBECONSTANT" energyunit="eV">
+				<ve energy="4.08" value="1.0"></ve>
+				<ve energy="1.7" value="1.0"></ve>
+			</propertyvector>
+			<propertyvector name="SPECULARSPIKECONSTANT" energyunit="eV">
+				<ve energy="4.08" value="0.0"></ve>
+				<ve energy="1.7" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="BACKSCATTERCONSTANT" energyunit="eV">
+				<ve energy="4.08" value="0.0"></ve>
+				<ve energy="1.7" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="RINDEX" energyunit="eV">
+				<ve energy="4.08" value="1.0"></ve>
+				<ve energy="1.7" value="1.0"></ve>
+			</propertyvector>
+			<propertyvector name="REFLECTIVITY" energyunit="eV">
+				<ve energy="4.08" value="0.95"></ve>
+				<ve energy="1.7" value="0.95"></ve>
+			</propertyvector>
+			<propertyvector name="EFFICIENCY" energyunit="eV">
+				<ve energy="4.08" value="0.0"></ve>
+				<ve energy="1.7" value="0.0"></ve>
+			</propertyvector>
+		</propertiestable>
+	</surface>
+	<surface name="polished_teflon_wrapped" type="dielectric_dielectric" sigmaalpha="0.1" finish="groundbackpainted">
+		<propertiestable>
+			<propertyvector name="SPECULARLOBECONSTANT" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="SPECULARSPIKECONSTANT" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="BACKSCATTERCONSTANT" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="RINDEX" energyunit="eV">
+				<ve energy="1.84" value="1.0"></ve>
+				<ve energy="4.08" value="1.0"></ve>
+			</propertyvector>
+			<propertyvector name="REFLECTIVITY" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="EFFICIENCY" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+		</propertiestable>
+	</surface>
+	<surface name="polished_teflon_wrapped_sigmaalpha_1" type="dielectric_dielectric" sigmaalpha="1." finish="groundbackpainted">
+		<propertiestable>
+			<propertyvector name="SPECULARLOBECONSTANT" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="SPECULARSPIKECONSTANT" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="BACKSCATTERCONSTANT" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="RINDEX" energyunit="eV">
+				<ve energy="1.84" value="1.0"></ve>
+				<ve energy="4.08" value="1.0"></ve>
+			</propertyvector>
+			<propertyvector name="REFLECTIVITY" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="EFFICIENCY" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+		</propertiestable>
+	</surface>
+	<surface name="polished_teflon_wrapped_sigmaalpha_2" type="dielectric_dielectric" sigmaalpha="2." finish="groundbackpainted">
+		<propertiestable>
+			<propertyvector name="SPECULARLOBECONSTANT" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="SPECULARSPIKECONSTANT" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="BACKSCATTERCONSTANT" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="RINDEX" energyunit="eV">
+				<ve energy="1.84" value="1.0"></ve>
+				<ve energy="4.08" value="1.0"></ve>
+			</propertyvector>
+			<propertyvector name="REFLECTIVITY" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="EFFICIENCY" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+		</propertiestable>
+	</surface>
+	<surface name="polished_teflon_wrapped_sigmaalpha_10" type="dielectric_dielectric" sigmaalpha="10." finish="groundbackpainted">
+		<propertiestable>
+			<propertyvector name="SPECULARLOBECONSTANT" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="SPECULARSPIKECONSTANT" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="BACKSCATTERCONSTANT" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="RINDEX" energyunit="eV">
+				<ve energy="1.84" value="1.0"></ve>
+				<ve energy="4.08" value="1.0"></ve>
+			</propertyvector>
+			<propertyvector name="REFLECTIVITY" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="EFFICIENCY" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+		</propertiestable>
+	</surface>
+	<surface name="polished_teflon_front_wrapped" type="dielectric_dielectric" sigmaalpha="0.1" finish="polishedfrontpainted">
+		<propertiestable>
+			<propertyvector name="SPECULARLOBECONSTANT" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="SPECULARSPIKECONSTANT" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="BACKSCATTERCONSTANT" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="RINDEX" energyunit="eV">
+				<ve energy="1.84" value="1.0"></ve>
+				<ve energy="4.08" value="1.0"></ve>
+			</propertyvector>
+			<propertyvector name="REFLECTIVITY" energyunit="eV">
+				<ve energy="1.84" value="0.95"></ve>
+				<ve energy="4.08" value="0.95"></ve>
+			</propertyvector>
+			<propertyvector name="TRANSMITTANCE" energyunit="eV">
+				<ve energy="1.84" value="0.05"></ve>
+				<ve energy="4.08" value="0.05"></ve>
+			</propertyvector>
+			<propertyvector name="EFFICIENCY" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+		</propertiestable>
+	</surface>
+	<surface name="rough_teflon_wrapped" type="dielectric_dielectric" sigmaalpha="6.0" finish="groundbackpainted">
+		<propertiestable>
+			<propertyvector name="SPECULARLOBECONSTANT" energyunit="eV">
+				<ve energy="1.84" value="1.0"></ve>
+				<ve energy="4.08" value="1.0"></ve>
+			</propertyvector>
+			<propertyvector name="SPECULARSPIKECONSTANT" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="BACKSCATTERCONSTANT" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="RINDEX" energyunit="eV">
+				<ve energy="1.84" value="1.0"></ve>
+				<ve energy="4.08" value="1.0"></ve>
+			</propertyvector>
+			<propertyvector name="REFLECTIVITY" energyunit="eV">
+				<ve energy="1.84" value="0.95"></ve>
+				<ve energy="4.08" value="0.95"></ve>
+			</propertyvector>
+			<propertyvector name="EFFICIENCY" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+		</propertiestable>
+	</surface>
+	<surface name="perfect_apd" type="dielectric_metal" sigmaalpha="0.0" finish="polished">
+		<propertiestable>
+			<propertyvector name="SPECULARLOBECONSTANT" energyunit="eV">
+				<ve energy="1.0" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.13" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="SPECULARSPIKECONSTANT" energyunit="eV">
+				<ve energy="1.0" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.13" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="BACKSCATTERCONSTANT" energyunit="eV">
+				<ve energy="1.0" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.13" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="REFLECTIVITY" energyunit="eV">
+				<ve energy="1.0" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.13" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="EFFICIENCY" energyunit="eV">
+				<ve energy="1.0" value="1.0"></ve>
+				<ve energy="2.34" value="1.0"></ve>
+				<ve energy="4.13" value="1.0"></ve>
+			</propertyvector>
+		</propertiestable>
+	</surface>
+	<surface name="unperfect_apd" type="dielectric_metal" sigmaalpha="0.0" finish="polished">
+		<propertiestable>
+			<propertyvector name="SPECULARLOBECONSTANT" energyunit="eV">
+				<ve energy="1.0" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.13" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="SPECULARSPIKECONSTANT" energyunit="eV">
+				<ve energy="1.0" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.13" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="BACKSCATTERCONSTANT" energyunit="eV">
+				<ve energy="1.0" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.13" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="REFLECTIVITY" energyunit="eV">
+				<ve energy="1.0" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.13" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="EFFICIENCY" energyunit="eV">
+				<ve energy="1.84" value="1.0"></ve>
+				<ve energy="4.84" value="1.0"></ve>
+			</propertyvector>
+		</propertiestable>
+	</surface>
+	<surface name="unperfect_apd_hamamatsu" type="dielectric_metal" sigmaalpha="0.0" finish="polished">
+		<propertiestable>
+			<propertyvector name="SPECULARLOBECONSTANT" energyunit="eV">
+				<ve energy="1.0" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.13" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="SPECULARSPIKECONSTANT" energyunit="eV">
+				<ve energy="1.0" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.13" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="BACKSCATTERCONSTANT" energyunit="eV">
+				<ve energy="1.0" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.13" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="REFLECTIVITY" energyunit="eV">
+				<ve energy="4.9592" value="0.672612594017585"></ve>
+				<ve energy="4.76846153846154" value="0.705173999753657"></ve>
+				<ve energy="4.59185185185185" value="0.732089552684876"></ve>
+				<ve energy="4.42785714285714" value="0.722956410931167"></ve>
+				<ve energy="4.2751724137931" value="0.684235361230538"></ve>
+				<ve energy="4.13266666666667" value="0.623487589028101"></ve>
+				<ve energy="3.99935483870968" value="0.590475835158614"></ve>
+				<ve energy="3.874375" value="0.574130337860842"></ve>
+				<ve energy="3.7569696969697" value="0.5656774122022"></ve>
+				<ve energy="3.64647058823529" value="0.561749318208869"></ve>
+				<ve energy="3.54228571428571" value="0.565380275909807"></ve>
+				<ve energy="3.44388888888889" value="0.582911002404122"></ve>
+				<ve energy="3.35081081081081" value="0.584270801263058"></ve>
+				<ve energy="3.26263157894737" value="0.546502292447187"></ve>
+				<ve energy="3.17897435897436" value="0.510973643823881"></ve>
+				<ve energy="3.0995" value="0.486021027692078"></ve>
+				<ve energy="3.02390243902439" value="0.466853259650879"></ve>
+				<ve energy="2.95190476190476" value="0.451521580514202"></ve>
+				<ve energy="2.88325581395349" value="0.439123248850964"></ve>
+				<ve energy="2.81772727272727" value="0.428907265346926"></ve>
+				<ve energy="2.75511111111111" value="0.419585699502722"></ve>
+				<ve energy="2.69521739130435" value="0.411485950400365"></ve>
+				<ve energy="2.63787234042553" value="0.404281394203058"></ve>
+				<ve energy="2.58291666666667" value="0.39787918076254"></ve>
+				<ve energy="2.53020408163265" value="0.391964732835764"></ve>
+				<ve energy="2.4796" value="0.387105531276213"></ve>
+				<ve energy="2.43098039215686" value="0.382264521501647"></ve>
+				<ve energy="2.38423076923077" value="0.377999091926155"></ve>
+				<ve energy="2.33924528301887" value="0.374142013737281"></ve>
+				<ve energy="2.29592592592593" value="0.370428522192012"></ve>
+				<ve energy="2.25418181818182" value="0.367335936121879"></ve>
+				<ve energy="2.21392857142857" value="0.364216221196157"></ve>
+				<ve energy="2.17508771929825" value="0.361451748594409"></ve>
+				<ve energy="2.13758620689655" value="0.358667134606895"></ve>
+				<ve energy="2.10135593220339" value="0.356344975212093"></ve>
+				<ve energy="2.06633333333333" value="0.354106671849336"></ve>
+				<ve energy="2.03245901639344" value="0.351853614251938"></ve>
+				<ve energy="1.99967741935484" value="0.349785241326916"></ve>
+				<ve energy="1.96793650793651" value="0.34820133857332"></ve>
+				<ve energy="1.9371875" value="0.346411479932793"></ve>
+				<ve energy="1.90738461538462" value="0.344713928379056"></ve>
+				<ve energy="1.87848484848485" value="0.34330931640043"></ve>
+				<ve energy="1.85044776119403" value="0.341798625402933"></ve>
+				<ve energy="1.82323529411765" value="0.340281901015896"></ve>
+				<ve energy="1.7968115942029" value="0.338962422361468"></ve>
+				<ve energy="1.77114285714286" value="0.337639001584691"></ve>
+				<ve energy="1.74619718309859" value="0.336413284699118"></ve>
+				<ve energy="1.72194444444444" value="0.3352856253833"></ve>
+				<ve energy="1.69835616438356" value="0.3342575899929"></ve>
+				<ve energy="1.67540540540541" value="0.33332999879242"></ve>
+				<ve energy="1.65306666666667" value="0.332400672745742"></ve>
+				<ve energy="1.63131578947368" value="0.331468651680362"></ve>
+				<ve energy="1.61012987012987" value="0.330534830393574"></ve>
+				<ve energy="1.58948717948718" value="0.329598359402392"></ve>
+				<ve energy="1.56936708860759" value="0.328764393207925"></ve>
+				<ve energy="1.54975" value="0.328032867790877"></ve>
+				<ve energy="1.53061728395062" value="0.327300305896179"></ve>
+				<ve energy="1.5119512195122" value="0.326671301461493"></ve>
+				<ve energy="1.49373493975904" value="0.326041006227035"></ve>
+				<ve energy="1.47595238095238" value="0.32540997581366"></ve>
+				<ve energy="1.45858823529412" value="0.324777930560902"></ve>
+				<ve energy="1.44162790697674" value="0.324144649551891"></ve>
+				<ve energy="1.42505747126437" value="0.323510569194358"></ve>
+				<ve energy="1.40886363636364" value="0.322875469350817"></ve>
+				<ve energy="1.39303370786517" value="0.3222391901263"></ve>
+				<ve energy="1.37755555555556" value="0.321602046138182"></ve>
+				<ve energy="1.36241758241758" value="0.320963878059092"></ve>
+				<ve energy="1.34760869565217" value="0.320324684364472"></ve>
+				<ve energy="1.33311827956989" value="0.319684463534747"></ve>
+				<ve energy="1.31893617021277" value="0.319150063811936"></ve>
+				<ve energy="1.30505263157895" value="0.318615045243477"></ve>
+				<ve energy="1.29145833333333" value="0.318079310589019"></ve>
+				<ve energy="1.27814432989691" value="0.317542858980053"></ve>
+				<ve energy="1.26510204081633" value="0.317113180903694"></ve>
+				<ve energy="1.25232323232323" value="0.316683042980187"></ve>
+				<ve energy="1.2398" value="0.316252444768591"></ve>
+			</propertyvector>
+			<propertyvector name="EFFICIENCY" energyunit="eV">
+				<ve energy="3.85914154653" value="0.0254237288136"></ve>
+				<ve energy="3.77987804878" value="0.0656779661017"></ve>
+				<ve energy="3.68526282854" value="0.122881355932"></ve>
+				<ve energy="3.57779465371" value="0.176906779661"></ve>
+				<ve energy="3.50956495828" value="0.224576271186"></ve>
+				<ve energy="3.30474186308" value="0.278601694915"></ve>
+				<ve energy="3.19016793066" value="0.333686440678"></ve>
+				<ve energy="2.98330800405" value="0.372881355932"></ve>
+				<ve energy="2.81234479465" value="0.396186440678"></ve>
+				<ve energy="2.6792766151" value="0.400423728814"></ve>
+				<ve energy="2.5582319722" value="0.39406779661"></ve>
+				<ve energy="2.32401341752" value="0.353813559322"></ve>
+				<ve energy="2.23239196361" value="0.317796610169"></ve>
+				<ve energy="2.10473552538" value="0.271186440678"></ve>
+				<ve energy="1.99628813559" value="0.235169491525"></ve>
+				<ve energy="1.87429980904" value="0.185381355932"></ve>
+				<ve energy="1.77916918429" value="0.156779661017"></ve>
+				<ve energy="1.67017867272" value="0.118644067797"></ve>
+				<ve energy="1.56707025013" value="0.0879237288136"></ve>
+				<ve energy="1.49392440386" value="0.0646186440678"></ve>
+				<ve energy="1.37916861827" value="0.0370762711864"></ve>
+			</propertyvector>
+		</propertiestable>
+	</surface>
+	<surface name="unperfect_apd_SENSL_6V" type="dielectric_metal" sigmaalpha="0.0" finish="polished">
+		<propertiestable>
+			<propertyvector name="SPECULARLOBECONSTANT" energyunit="eV">
+				<ve energy="1.0" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.13" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="SPECULARSPIKECONSTANT" energyunit="eV">
+				<ve energy="1.0" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.13" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="BACKSCATTERCONSTANT" energyunit="eV">
+				<ve energy="1.0" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.13" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="REFLECTIVITY" energyunit="eV">
+				<ve energy="1.0" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.13" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="EFFICIENCY" energyunit="eV">
+				<ve energy="4.9592" value="0.0945674044266"></ve>
+				<ve energy="4.59903463687" value="0.130784708249"></ve>
+				<ve energy="4.44827377522" value="0.221327967807"></ve>
+				<ve energy="4.26837469755" value="0.350100603622"></ve>
+				<ve energy="4.15631369909" value="0.46277665996"></ve>
+				<ve energy="3.93261401274" value="0.559356136821"></ve>
+				<ve energy="3.71716074654" value="0.643863179074"></ve>
+				<ve energy="3.44735008375" value="0.700201207243"></ve>
+				<ve energy="3.28066099894" value="0.770623742455"></ve>
+				<ve energy="3.15010408163" value="0.853118712274"></ve>
+				<ve energy="2.93590299572" value="0.927565392354"></ve>
+				<ve energy="2.73315803453" value="0.887323943662"></ve>
+				<ve energy="2.64930444111" value="0.830985915493"></ve>
+				<ve energy="2.55660621118" value="0.772635814889"></ve>
+				<ve energy="2.4895983871" value="0.72032193159"></ve>
+				<ve energy="2.41983303939" value="0.653923541247"></ve>
+				<ve energy="2.3655954023" value="0.591549295775"></ve>
+				<ve energy="2.25871739528" value="0.521126760563"></ve>
+				<ve energy="2.14642934121" value="0.432595573441"></ve>
+				<ve energy="2.04918818453" value="0.35814889336"></ve>
+				<ve energy="1.93639767916" value="0.287726358149"></ve>
+				<ve energy="1.82129911504" value="0.223340040241"></ve>
+				<ve energy="1.72536090541" value="0.162977867203"></ve>
+				<ve energy="1.6112223382" value="0.112676056338"></ve>
+				<ve energy="1.49932102963" value="0.0643863179074"></ve>
+				<ve energy="1.37556065501" value="0.0281690140845"></ve>
+			</propertyvector>
+		</propertiestable>
+	</surface>
+	<surface name="unperfect_apd_SENSL_2.5V" type="dielectric_metal" sigmaalpha="0.0" finish="polished">
+		<propertiestable>
+			<propertyvector name="SPECULARLOBECONSTANT" energyunit="eV">
+				<ve energy="1.0" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.13" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="SPECULARSPIKECONSTANT" energyunit="eV">
+				<ve energy="1.0" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.13" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="BACKSCATTERCONSTANT" energyunit="eV">
+				<ve energy="1.0" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.13" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="REFLECTIVITY" energyunit="eV">
+				<ve energy="1.0" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.13" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="EFFICIENCY" energyunit="eV">
+				<ve energy="4.9592" value="0.0718562874251"></ve>
+				<ve energy="4.59970408922" value="0.10379241517"></ve>
+				<ve energy="4.40798147488" value="0.195608782435"></ve>
+				<ve energy="4.28880554593" value="0.27744510978"></ve>
+				<ve energy="4.12165356429" value="0.375249500998"></ve>
+				<ve energy="3.91805066498" value="0.459081836327"></ve>
+				<ve energy="3.70455209581" value="0.516966067864"></ve>
+				<ve energy="3.37604474761" value="0.562874251497"></ve>
+				<ve energy="3.23821093954" value="0.634730538922"></ve>
+				<ve energy="2.99375852891" value="0.688622754491"></ve>
+				<ve energy="2.75143517901" value="0.644710578842"></ve>
+				<ve energy="2.6297989373" value="0.572854291417"></ve>
+				<ve energy="2.53186085533" value="0.50499001996"></ve>
+				<ve energy="2.42849931305" value="0.435129740519"></ve>
+				<ve energy="2.29388283278" value="0.363273453094"></ve>
+				<ve energy="2.16845495969" value="0.297405189621"></ve>
+				<ve energy="2.03406279796" value="0.235528942116"></ve>
+				<ve energy="1.91921886149" value="0.175648702595"></ve>
+				<ve energy="1.80288561853" value="0.135728542914"></ve>
+				<ve energy="1.68182737529" value="0.0958083832335"></ve>
+				<ve energy="1.58916054457" value="0.061876247505"></ve>
+				<ve energy="1.4781034524" value="0.0379241516966"></ve>
+			</propertyvector>
+		</propertiestable>
+	</surface>
+	<surface name="smooth" type="dielectric_dielectric" sigmaalpha="0.1" finish="polished">
+		<propertiestable>
+			<propertyvector name="SPECULARLOBECONSTANT" energyunit="eV">
+				<ve energy="1.97" value="1.0"></ve>
+				<ve energy="2.34" value="1.0"></ve>
+				<ve energy="4.08" value="1.0"></ve>
+			</propertyvector>
+			<propertyvector name="SPECULARSPIKECONSTANT" energyunit="eV">
+				<ve energy="1.97" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="BACKSCATTERCONSTANT" energyunit="eV">
+				<ve energy="1.97" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+		</propertiestable>
+	</surface>
+	<surface name="smooth_perso" type="dielectric_dielectric" sigmaalpha="0.1" finish="polished">
+		<propertiestable>
+			<propertyvector name="SPECULARLOBECONSTANT" energyunit="eV">
+				<ve energy="1.97" value="1.0"></ve>
+				<ve energy="2.34" value="1.0"></ve>
+				<ve energy="4.08" value="1.0"></ve>
+			</propertyvector>
+			<propertyvector name="SPECULARSPIKECONSTANT" energyunit="eV">
+				<ve energy="1.97" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="REFLECTIVITY" energyunit="eV">
+				<ve energy="1.0" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.13" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="BACKSCATTERCONSTANT" energyunit="eV">
+				<ve energy="1.97" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+		</propertiestable>
+	</surface>
+	<surface name="rough" type="dielectric_dielectric" sigmaalpha="6.0" finish="ground">
+		<propertiestable>
+			<propertyvector name="SPECULARLOBECONSTANT" energyunit="eV">
+				<ve energy="1.84" value="1.0"></ve>
+				<ve energy="4.08" value="1.0"></ve>
+			</propertyvector>
+			<propertyvector name="SPECULARSPIKECONSTANT" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="BACKSCATTERCONSTANT" energyunit="eV">
+				<ve energy="1.84" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+		</propertiestable>
+	</surface>
+	<surface name="black" type="dielectric_metal" sigmaalpha="0.0" finish="ground">
+		<propertiestable>
+			<propertyvector name="SPECULARLOBECONSTANT" energyunit="eV">
+				<ve energy="1.97" value="1.0"></ve>
+				<ve energy="2.34" value="1.0"></ve>
+				<ve energy="4.08" value="1.0"></ve>
+			</propertyvector>
+			<propertyvector name="SPECULARSPIKECONSTANT" energyunit="eV">
+				<ve energy="1.97" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="BACKSCATTERCONSTANT" energyunit="eV">
+				<ve energy="1.97" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="REFLECTIVITY" energyunit="eV">
+				<ve energy="1.97" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="EFFICIENCY" energyunit="eV">
+				<ve energy="1.97" value="0.0"></ve>
+				<ve energy="2.34" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+		</propertiestable>
+	</surface>
+	<surface name="polished" type="dielectric_dielectric" sigmaalpha="0.1" finish="ground">
+		<propertiestable>
+			<propertyvector name="SPECULARLOBECONSTANT" energyunit="eV">
+				<ve energy="1.7" value="1.0"></ve>
+				<ve energy="4.08" value="1.0"></ve>
+			</propertyvector>
+			<propertyvector name="SPECULARSPIKECONSTANT" energyunit="eV">
+				<ve energy="1.7" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+			<propertyvector name="BACKSCATTERCONSTANT" energyunit="eV">
+				<ve energy="1.7" value="0.0"></ve>
+				<ve energy="4.08" value="0.0"></ve>
+			</propertyvector>
+		</propertiestable>
+	</surface>
+	<surface name="polished_perso_sigmaalpha_0.1" type="dielectric_metal" sigmaalpha="0.1" finish="ground">
+		<propertiestable>
+			<propertyvector name="SPECULARLOBECONSTANT" energyunit="eV">
+				<ve energy="1.7" value="0.8"></ve>
+				<ve energy="4.08" value="0.8"></ve>
+			</propertyvector>
+			<propertyvector name="SPECULARSPIKECONSTANT" energyunit="eV">
+				<ve energy="1.7" value="0.1"></ve>
+				<ve energy="4.08" value="0.1"></ve>
+			</propertyvector>
+			<propertyvector name="BACKSCATTERCONSTANT" energyunit="eV">
+				<ve energy="1.7" value="0.1"></ve>
+				<ve energy="4.08" value="0.1"></ve>
+			</propertyvector>
+			<propertyvector name="REFLECTIVITY" energyunit="eV">
+				<ve energy="1.97" value="1.0"></ve>
+				<ve energy="4.08" value="1.0"></ve>
+			</propertyvector>
+			<propertyvector name="TRANSMITTANCE" energyunit="eV">
+				<ve energy="1.84" value="0.05"></ve>
+				<ve energy="4.08" value="0.05"></ve>
+			</propertyvector>
+		</propertiestable>
+	</surface>
+	<surface name="polished_perso_sigmaalpha_6.0" type="dielectric_metal" sigmaalpha="6.0" finish="ground">
+		<propertiestable>
+			<propertyvector name="SPECULARLOBECONSTANT" energyunit="eV">
+				<ve energy="1.7" value="0.8"></ve>
+				<ve energy="4.08" value="0.8"></ve>
+			</propertyvector>
+			<propertyvector name="SPECULARSPIKECONSTANT" energyunit="eV">
+				<ve energy="1.7" value="0.1"></ve>
+				<ve energy="4.08" value="0.1"></ve>
+			</propertyvector>
+			<propertyvector name="BACKSCATTERCONSTANT" energyunit="eV">
+				<ve energy="1.7" value="0.1"></ve>
+				<ve energy="4.08" value="0.1"></ve>
+			</propertyvector>
+			<propertyvector name="REFLECTIVITY" energyunit="eV">
+				<ve energy="1.97" value="1.0"></ve>
+				<ve energy="4.08" value="1.0"></ve>
+			</propertyvector>
+			<propertyvector name="TRANSMITTANCE" energyunit="eV">
+				<ve energy="1.84" value="0.05"></ve>
+				<ve energy="4.08" value="0.05"></ve>
+			</propertyvector>
+		</propertiestable>
+	</surface>
+</surfaces>

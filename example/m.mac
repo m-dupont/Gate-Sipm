@@ -1,0 +1,361 @@
+##################################################################################################
+#VISUALIZATION
+
+/vis/disable 
+
+
+
+/gate/geometry/setMaterialDatabase            GateMaterials.db
+
+
+
+# ============================
+# == PHYSICS                ==
+# ============================
+
+/gate/physics/addPhysicsList empenelope
+
+/gate/physics/removeProcess MuPairProduction mu+
+/gate/physics/removeProcess MuPairProduction mu-
+
+/gate/physics/addProcess Scintillation
+/gate/physics/addProcess OpticalRayleigh
+/gate/physics/addProcess OpticalMie
+/gate/physics/addProcess OpticalAbsorption
+/gate/physics/addProcess OpticalBoundary
+
+
+# notice: fluo, auger, PIXE set to true by default
+
+
+/process/em/fluo  false
+/process/em/auger false
+/process/em/pixe  false
+
+
+/gate/physics/processList Enabled
+/gate/physics/processList Initialized
+
+
+
+
+/gate/world/geometry/setXLength               294.912 mm
+/gate/world/geometry/setYLength              7.3439999999999985 mm
+/gate/world/geometry/setZLength               7.3439999999999985 mm
+
+
+
+
+
+/gate/world/vis/setVisible true
+
+
+
+# # === scanner ===
+/gate/world/daughters/name              scanner
+/gate/world/daughters/insert            box
+/gate/scanner/geometry/setXLength               245.76 mm
+/gate/scanner/geometry/setYLength               6.119999999999999 mm
+/gate/scanner/geometry/setZLength               6.119999999999999 mm
+/gate/scanner/placement/setTranslation          0 0 0 mm
+/gate/scanner/setMaterial                       Air
+/gate/scanner/vis/setVisible true
+/gate/scanner/vis/setColor                      red
+/gate/scanner/vis/forceWireframe
+    
+    
+
+
+
+
+# # === myblock ===
+/gate/scanner/daughters/name              myblock
+/gate/scanner/daughters/insert            box
+/gate/myblock/geometry/setXLength               9.6 mm
+/gate/myblock/geometry/setYLength               5.1 mm
+/gate/myblock/geometry/setZLength               5.1 mm
+/gate/myblock/placement/setTranslation          100 0 0 mm
+/gate/myblock/setMaterial                       Air
+/gate/myblock/vis/setVisible true
+/gate/myblock/vis/setColor                      green
+/gate/myblock/vis/forceWireframe
+    
+    
+
+
+
+
+# # === AirFaceVolume ===
+/gate/myblock/daughters/name              AirFaceVolume
+/gate/myblock/daughters/insert            box
+/gate/AirFaceVolume/geometry/setXLength               0.1 mm
+/gate/AirFaceVolume/geometry/setYLength               3 mm
+/gate/AirFaceVolume/geometry/setZLength               3 mm
+/gate/AirFaceVolume/placement/setTranslation          -2.55 0 0 mm
+/gate/AirFaceVolume/setMaterial                       Air
+/gate/AirFaceVolume/vis/setVisible true
+/gate/AirFaceVolume/vis/setColor                      blue
+/gate/AirFaceVolume/vis/forceWireframe
+    
+    
+
+
+
+
+# # === crystal_scintillator ===
+/gate/myblock/daughters/name              crystal_scintillator
+/gate/myblock/daughters/insert            box
+/gate/crystal_scintillator/geometry/setXLength               5 mm
+/gate/crystal_scintillator/geometry/setYLength               3 mm
+/gate/crystal_scintillator/geometry/setZLength               3 mm
+/gate/crystal_scintillator/placement/setTranslation          0 0 0 mm
+/gate/crystal_scintillator/setMaterial                       LYSO7O5_36
+/gate/crystal_scintillator/vis/setVisible true
+/gate/crystal_scintillator/vis/setColor                      yellow
+/gate/crystal_scintillator/vis/forceWireframe
+    
+    
+
+
+/gate/crystal_scintillator/attachCrystalSD
+
+# # === couplingVolume ===
+/gate/myblock/daughters/name              couplingVolume
+/gate/myblock/daughters/insert            box
+/gate/couplingVolume/geometry/setXLength               0.1 mm
+/gate/couplingVolume/geometry/setYLength               3.1 mm
+/gate/couplingVolume/geometry/setZLength               3.1 mm
+/gate/couplingVolume/placement/setTranslation          2.55 0 0 mm
+/gate/couplingVolume/setMaterial                       Epoxy
+/gate/couplingVolume/vis/setVisible true
+/gate/couplingVolume/vis/setColor                      red
+/gate/couplingVolume/vis/forceWireframe
+    
+    
+
+
+
+
+# # === SiPM ===
+/gate/myblock/daughters/name              SiPM
+/gate/myblock/daughters/insert            box
+/gate/SiPM/geometry/setXLength               1.2 mm
+/gate/SiPM/geometry/setYLength               3.4 mm
+/gate/SiPM/geometry/setZLength               3.4 mm
+/gate/SiPM/placement/setTranslation          3.2 0 0 mm
+/gate/SiPM/setMaterial                       Silicon
+/gate/SiPM/vis/setVisible true
+/gate/SiPM/vis/setColor                      blue
+/gate/SiPM/vis/forceWireframe
+    
+    
+
+
+
+
+# # === SiPM_macropixels ===
+/gate/SiPM/daughters/name              SiPM_macropixels
+/gate/SiPM/daughters/insert            box
+/gate/SiPM_macropixels/geometry/setXLength               1.2 mm
+/gate/SiPM_macropixels/geometry/setYLength               3 mm
+/gate/SiPM_macropixels/geometry/setZLength               3 mm
+/gate/SiPM_macropixels/placement/setTranslation          0 0 0 mm
+/gate/SiPM_macropixels/setMaterial                       Epoxy
+/gate/SiPM_macropixels/vis/setVisible true
+/gate/SiPM_macropixels/vis/setColor                      red
+/gate/SiPM_macropixels/vis/forceWireframe
+    
+    
+
+
+/gate/SiPM_macropixels/attachCrystalSD # R E P E A T E R S
+/gate/SiPM_macropixels/repeaters/insert cubicArray
+/gate/SiPM_macropixels/cubicArray/setRepeatNumberX 1
+/gate/SiPM_macropixels/cubicArray/setRepeatNumberY 1
+/gate/SiPM_macropixels/cubicArray/setRepeatNumberZ 1
+/gate/SiPM_macropixels/cubicArray/setRepeatVector 0 3.4 3.4 mm
+ # R E P E A T E R S
+/gate/myblock/repeaters/insert ring
+/gate/myblock/ring/setRepeatNumber 1
+
+
+
+
+
+
+
+
+
+
+
+/gate/systems/scanner/level1/attach myblock
+/gate/systems/scanner/level2/attach SiPM_macropixels
+
+/gate/run/initialize
+
+/gate/AirFaceVolume/surfaces/name     myblockToAirFaceVolume
+/gate/AirFaceVolume/surfaces/insert                  myblock
+/gate/AirFaceVolume/surfaces/myblockToAirFaceVolume/setSurface     black
+
+/gate/myblock/surfaces/name     AirFaceVolumeTomyblock
+/gate/myblock/surfaces/insert                  AirFaceVolume
+/gate/myblock/surfaces/AirFaceVolumeTomyblock/setSurface     black
+
+/gate/crystal_scintillator/surfaces/name     myblockTocrystal_scintillator
+/gate/crystal_scintillator/surfaces/insert                  myblock
+/gate/crystal_scintillator/surfaces/myblockTocrystal_scintillator/setSurface     Rough_LUT
+
+/gate/myblock/surfaces/name     crystal_scintillatorTomyblock
+/gate/myblock/surfaces/insert                  crystal_scintillator
+/gate/myblock/surfaces/crystal_scintillatorTomyblock/setSurface     Rough_LUT
+
+/gate/couplingVolume/surfaces/name     myblockTocouplingVolume
+/gate/couplingVolume/surfaces/insert                  myblock
+/gate/couplingVolume/surfaces/myblockTocouplingVolume/setSurface     Rough_LUT
+
+/gate/myblock/surfaces/name     couplingVolumeTomyblock
+/gate/myblock/surfaces/insert                  couplingVolume
+/gate/myblock/surfaces/couplingVolumeTomyblock/setSurface     Rough_LUT
+
+/gate/couplingVolume/surfaces/name     SiPMTocouplingVolume
+/gate/couplingVolume/surfaces/insert                  SiPM
+/gate/couplingVolume/surfaces/SiPMTocouplingVolume/setSurface     Polished_LUT
+
+/gate/SiPM/surfaces/name     couplingVolumeToSiPM
+/gate/SiPM/surfaces/insert                  couplingVolume
+/gate/SiPM/surfaces/couplingVolumeToSiPM/setSurface     Polished_LUT
+
+/gate/crystal_scintillator/surfaces/name     AirFaceVolumeTocrystal_scintillator
+/gate/crystal_scintillator/surfaces/insert                  AirFaceVolume
+/gate/crystal_scintillator/surfaces/AirFaceVolumeTocrystal_scintillator/setSurface     Rough_LUT
+
+/gate/AirFaceVolume/surfaces/name     crystal_scintillatorToAirFaceVolume
+/gate/AirFaceVolume/surfaces/insert                  crystal_scintillator
+/gate/AirFaceVolume/surfaces/crystal_scintillatorToAirFaceVolume/setSurface     Rough_LUT
+
+/gate/crystal_scintillator/surfaces/name     couplingVolumeTocrystal_scintillator
+/gate/crystal_scintillator/surfaces/insert                  couplingVolume
+/gate/crystal_scintillator/surfaces/couplingVolumeTocrystal_scintillator/setSurface     smooth
+
+/gate/couplingVolume/surfaces/name     crystal_scintillatorTocouplingVolume
+/gate/couplingVolume/surfaces/insert                  crystal_scintillator
+/gate/couplingVolume/surfaces/crystal_scintillatorTocouplingVolume/setSurface     smooth
+
+/gate/couplingVolume/surfaces/name     SiPM_macropixelsTocouplingVolume
+/gate/couplingVolume/surfaces/insert                  SiPM_macropixels
+/gate/couplingVolume/surfaces/SiPM_macropixelsTocouplingVolume/setSurface     unperfect_apd_hamamatsu
+
+/gate/SiPM_macropixels/surfaces/name     couplingVolumeToSiPM_macropixels
+/gate/SiPM_macropixels/surfaces/insert                  couplingVolume
+/gate/SiPM_macropixels/surfaces/couplingVolumeToSiPM_macropixels/setSurface     unperfect_apd_hamamatsu
+
+
+
+/gate/source/addSource                               mysource gps
+/gate/source/mysource/setActivity             1 becquerel
+/gate/source/mysource/gps/particle            gamma
+/gate/source/mysource/gps/energytype             Mono
+/gate/source/mysource/gps/monoenergy            511000 eV
+
+
+/gate/source/mysource/gps/type Point
+/gate/source/mysource/gps/angtype beam1d
+
+/gate/source/mysource/setType backtoback
+
+#/gate/source/mysource/gps/direction                  1. 0. 0.
+
+/gate/source/mysource/gps/angtype iso
+/gate/source/mysource/gps/mintheta 86. deg
+/gate/source/mysource/gps/maxtheta 94. deg
+/gate/source/mysource/gps/minphi -4. deg
+/gate/source/mysource/gps/maxphi 4. deg
+
+
+/gate/source/mysource/gps/centre                     0 0 0 mm
+
+/gate/source/mysource/visualize             2000 white 3
+
+/gate/source/list
+
+
+##################################################################################################
+
+
+/gate/digitizer/Singles/enable
+#/gate/digitizer/Singles/insert  opticaladder
+#/gate/digitizer/Singles/insert  readout
+
+
+#/gate/digitizer/Singles/readout/setDepth 1
+#/gate/digitizer/Singles/readout/setDepth 2
+#/gate/digitizer/Singles/readout/setDepth 3
+#/gate/digitizer/Singles/readout/setDepth 4
+#/gate/digitizer/Singles/readout/setDepth 5
+
+
+
+
+##################################################################################################
+#DATA OUTPUT
+
+
+
+/gate/output/root/enable
+
+/gate/output/root/setRootHitFlag          1
+/gate/output/root/setFileName                     output_debug_1
+
+#/gate/output/root/setRootSinglesFlag      1
+/gate/output/root/setRootOpticalFlag      0
+#/gate/output/root/setRootSinglesOpticaladderFlag 1
+#/gate/output/root/setRootSinglesReadoutFlag 1
+#/gate/output/root/setRootRecordFlag 0
+
+
+
+
+
+#/gate/output/analysis/disable
+/gate/output/fastanalysis/enable
+
+
+
+
+
+
+/gate/digitizer/Singles/insert  sipm
+/gate/digitizer/Singles/sipm/setVolume SiPM_macropixels
+/gate/digitizer/Singles/sipm/type hamamatsucross
+/gate/digitizer/Singles/sipm/setStartSignal 0.0 s
+/gate/digitizer/Singles/sipm/setDurationSignal 2e-05 s
+/gate/digitizer/Singles/sipm/setStepSignal 0.5 ns
+/gate/digitizer/Singles/sipm/surface YZ
+/gate/digitizer/Singles/sipm/initialize
+
+
+
+
+
+
+
+###################################################################################################
+#MEASUREMENT SETTINGS
+
+#/gate/systems/scanner/describe
+
+# A C Q U I S I T I O N
+
+
+
+# If using DAQ: setActivity is needed in the Source
+
+/gate/application/setTimeSlice   1e-05 s
+/gate/application/setTimeStart   0 s
+/gate/application/setTimeStop    1.5e-05 s
+/gate/application/setNumberOfPrimariesPerRun 1
+/gate/application/startDAQ
+
+
+
+

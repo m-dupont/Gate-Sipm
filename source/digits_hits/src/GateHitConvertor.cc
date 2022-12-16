@@ -112,6 +112,7 @@ void GateHitConvertor::ProcessOneHit(const GateCrystalHit* hit,GatePulseList* pu
   pulse->SetVolumeID( hit->GetVolumeID() );
   pulse->SetScannerPos( hit->GetScannerPos() );
   pulse->SetScannerRotAngle( hit->GetScannerRotAngle() );
+  pulse->SetTrackID(hit->GetTrackID());
 #ifdef GATE_USE_OPTICAL
   pulse->SetOptical( hit->GetPDGEncoding() == 0 );
 #endif
